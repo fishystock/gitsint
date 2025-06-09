@@ -27,7 +27,7 @@ def main():
 
     data = extract_emails_and_timezones(args.repo_path)
     table = [(email, ', '.join(sorted(timezones))) for email, timezones in sorted(data.items())]
-    print(tabulate(table, headers=["Email", "Timezones"], tablefmt="grid"))
+    print(tabulate(table, headers=["Email", "UTC Offset(s)"], tablefmt="grid"))
 
 if __name__ == '__main__':
     main()
